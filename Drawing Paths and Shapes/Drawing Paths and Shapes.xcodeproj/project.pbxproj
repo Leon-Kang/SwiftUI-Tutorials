@@ -13,6 +13,7 @@
 		35A049C3233DE98D00F768A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A049C2233DE98D00F768A6 /* Preview Assets.xcassets */; };
 		35A049C6233DE98D00F768A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A049C4233DE98D00F768A6 /* LaunchScreen.storyboard */; };
 		35A049CE233DEB1600F768A6 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A049CD233DEB1600F768A6 /* Badge.swift */; };
+		35A049D0233DED3D00F768A6 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A049CF233DED3D00F768A6 /* HexagonParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		35A049C5233DE98D00F768A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35A049C7233DE98D00F768A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A049CD233DEB1600F768A6 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		35A049CF233DED3D00F768A6 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				35A049B9233DE98C00F768A6 /* AppDelegate.swift */,
 				35A049BB233DE98C00F768A6 /* SceneDelegate.swift */,
 				35A049CD233DEB1600F768A6 /* Badge.swift */,
+				35A049CF233DED3D00F768A6 /* HexagonParameters.swift */,
 				35A049BF233DE98D00F768A6 /* Assets.xcassets */,
 				35A049C4233DE98D00F768A6 /* LaunchScreen.storyboard */,
 				35A049C7233DE98D00F768A6 /* Info.plist */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A049D0233DED3D00F768A6 /* HexagonParameters.swift in Sources */,
 				35A049BA233DE98C00F768A6 /* AppDelegate.swift in Sources */,
 				35A049CE233DEB1600F768A6 /* Badge.swift in Sources */,
 				35A049BC233DE98C00F768A6 /* SceneDelegate.swift in Sources */,
