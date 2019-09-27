@@ -39,7 +39,7 @@ struct LandmarkDetail: View {
                                 .foregroundColor(.yellow)
                         } else {
                             Image(systemName: "star")
-                            .foregroundColor(.gray)
+                                .foregroundColor(.gray)
                         }
                     }
                 }
