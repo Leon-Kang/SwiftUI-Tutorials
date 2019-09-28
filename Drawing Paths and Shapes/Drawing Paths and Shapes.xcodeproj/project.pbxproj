@@ -14,6 +14,9 @@
 		35A049C6233DE98D00F768A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A049C4233DE98D00F768A6 /* LaunchScreen.storyboard */; };
 		35A049CE233DEB1600F768A6 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A049CD233DEB1600F768A6 /* Badge.swift */; };
 		35A049D0233DED3D00F768A6 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A049CF233DED3D00F768A6 /* HexagonParameters.swift */; };
+		6B581E81233F3F4B0085062A /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B581E80233F3F4B0085062A /* BadgeBackground.swift */; };
+		6B581E83233F3FAA0085062A /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B581E82233F3FAA0085062A /* BadgeSymbol.swift */; };
+		6B581E85233F415D0085062A /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B581E84233F415D0085062A /* RotatedBadgeSymbol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		35A049C7233DE98D00F768A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A049CD233DEB1600F768A6 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		35A049CF233DED3D00F768A6 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
+		6B581E80233F3F4B0085062A /* BadgeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
+		6B581E82233F3FAA0085062A /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
+		6B581E84233F415D0085062A /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				35A049B9233DE98C00F768A6 /* AppDelegate.swift */,
 				35A049BB233DE98C00F768A6 /* SceneDelegate.swift */,
 				35A049CD233DEB1600F768A6 /* Badge.swift */,
+				6B581E82233F3FAA0085062A /* BadgeSymbol.swift */,
+				6B581E84233F415D0085062A /* RotatedBadgeSymbol.swift */,
+				6B581E80233F3F4B0085062A /* BadgeBackground.swift */,
 				35A049CF233DED3D00F768A6 /* HexagonParameters.swift */,
 				35A049BF233DE98D00F768A6 /* Assets.xcassets */,
 				35A049C4233DE98D00F768A6 /* LaunchScreen.storyboard */,
@@ -152,7 +161,10 @@
 				35A049D0233DED3D00F768A6 /* HexagonParameters.swift in Sources */,
 				35A049BA233DE98C00F768A6 /* AppDelegate.swift in Sources */,
 				35A049CE233DEB1600F768A6 /* Badge.swift in Sources */,
+				6B581E81233F3F4B0085062A /* BadgeBackground.swift in Sources */,
 				35A049BC233DE98C00F768A6 /* SceneDelegate.swift in Sources */,
+				6B581E85233F415D0085062A /* RotatedBadgeSymbol.swift in Sources */,
+				6B581E83233F3FAA0085062A /* BadgeSymbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
