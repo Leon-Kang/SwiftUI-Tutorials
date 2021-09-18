@@ -11,6 +11,9 @@ struct TabBar: View {
     @StateObject var cardsModel = CardDetailViewModel()
     @Namespace var cardAnimation
     
+    @StateObject var todayModel = TodayViewModel()
+    @Namespace var todayAnimation
+    
     var body: some View {
         ZStack {
             TabView {
@@ -22,6 +25,15 @@ struct TabBar: View {
                     }
                     
                 // Today
+                
+                TodayHomeView(animation: todayAnimation)
+                    .environmentObject(todayModel)
+                    .tabItem {
+                        Image("today")
+                            .renderingMode(.template)
+                        
+                        Text("Today")
+                    }
                 
                 // Games
                 Text("Games")
@@ -47,6 +59,10 @@ struct TabBar: View {
             
             if cardsModel.showCard {
                 CardDetailView(model: cardsModel, animation: cardAnimation)
+            }
+            
+            if todayModel.show {
+                TodayDetailView(detail: todayModel, animation: todayAnimation)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

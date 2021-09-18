@@ -32,22 +32,22 @@ extension View {
     }
 }
 
-struct NavigationBarColorTest: View {
-    var body: some View {
-        NavigationView {
-            List {
-                ForEach(0 ..< 24, id: \.self, content: { i in
-                    NavigationLink("(\(i)", destination: EmptyView())
-                })
-            }
-            .navigationBarTitle("BAR TITLE")
-        }
-        .navigationBarColor(backgroundColor: .systemTeal, tintColor: .white)
-    }
-}
-
 struct NavigationBarColor_Previews: PreviewProvider {
+    struct TestView: View {
+        var body: some View {
+            NavigationView {
+                List {
+                    ForEach(0 ..< 24, id: \.self, content: { i in
+                        NavigationLink("(\(i)", destination: EmptyView())
+                    })
+                }
+                .navigationBarTitle("BAR TITLE")
+            }
+            .navigationBarColor(backgroundColor: .systemTeal, tintColor: .white)
+        }
+    }
+    
     static var previews: some View {
-        NavigationBarColorTest()
+        TestView()
     }
 }
