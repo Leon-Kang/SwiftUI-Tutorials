@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TodayItem {
+struct TodayItem: Identifiable {
     var id = UUID().uuidString
     var title: String
     var category: String
