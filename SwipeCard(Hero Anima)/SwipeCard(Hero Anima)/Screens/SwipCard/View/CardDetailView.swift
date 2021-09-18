@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct DetailView: View {
-    @EnvironmentObject var model: CardDetailViewModel
+struct CardDetailView: View {
+    var model: CardDetailViewModel
     var animation: Namespace.ID
     
     var body: some View {
@@ -34,16 +34,12 @@ struct DetailView: View {
                     Spacer(minLength: 0)
                 }
                 
-                if model.showContent {
-                    ScrollView {
-                        Text(model.content)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .padding()
-                            .animation(.easeIn)
-                            .matchedGeometryEffect(id: "Content-\(model.selectedCard.id)", in: animation)
-                    }
-                }
+                Text(model.content)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .padding()
+                    .animation(.easeIn)
+                    .matchedGeometryEffect(id: "Content-\(model.selectedCard.id)", in: animation)
                 
                 Spacer(minLength: 0)
             }
@@ -58,27 +54,27 @@ struct DetailView: View {
             VStack {
                 Spacer()
                 
-                if model.showContent {
-                    Button(action: closeView) {
-                        Image(systemName: "arrow.down")
-                            .font(.system(size: 20, weight: .semibold))
-                            .foregroundColor(.blue)
-                            .padding()
-                            .background(Color.white.opacity(0.6))
-                            .clipShape(Circle())
-                            .padding(5)
-                            .background(Color.white.opacity(0.7))
-                            .clipShape(Circle())
-                            .shadow(radius: 3)
-                    }
-                    .padding(.bottom)
+                Button(action: closeView) {
+                    Image(systemName: "arrow.down")
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundColor(.blue)
+                        .padding()
+                        .background(Color.white.opacity(0.6))
+                        .clipShape(Circle())
+                        .padding(5)
+                        .background(Color.white.opacity(0.7))
+                        .clipShape(Circle())
+                        .shadow(radius: 3)
                 }
+                .padding(.bottom)
+                .matchedGeometryEffect(id: "closebtn-\(model.selectedCard.id)", in: animation)
             }
         }
+        .scaleEffect(1)
     }
 }
 
-extension DetailView {
+extension CardDetailView {
     func closeView() {
         withAnimation(.spring()) {
             model.showCard.toggle()

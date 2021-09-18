@@ -9,9 +9,9 @@ import SwiftUI
 
 var width = UIScreen.main.bounds.width
 
-struct Home: View {
+struct CardHome: View {
     @EnvironmentObject var model: CardDetailViewModel
-    @Namespace var animation
+    var animation: Namespace.ID
     
     var body: some View {
         ZStack {
@@ -66,19 +66,16 @@ struct Home: View {
                         .shadow(radius: 3)
                 }
                 .padding(.top, 35)
+                .matchedGeometryEffect(id: "closebtn-\(model.selectedCard.id)", in: animation)
                 
                 Spacer()
             }
-            
-            if model.showCard {
-                DetailView(animation: animation)
-            }
-            
+
         }
     }
 }
 
-extension Home {
+extension CardHome {
     func resetViews() {
         for index in model.cards.indices {
             withAnimation(.spring()) {
@@ -107,7 +104,7 @@ extension Home {
 }
 
 // UI FUNC
-extension Home {
+extension CardHome {
     func getScale(index: Int) -> CGFloat {
         switch index - model.swipedCard {
         case 0:
@@ -145,7 +142,17 @@ extension Home {
 }
 
 struct Home_Previews: PreviewProvider {
+    struct TestView: View {
+        @Namespace var id
+        @StateObject var mdoel = CardDetailViewModel()
+        
+        var body: some View {
+            CardHome(animation: id).environmentObject(CardDetailViewModel())
+        }
+        
+    }
+    
     static var previews: some View {
-        Home().environmentObject(CardDetailViewModel())
+        TestView()
     }
 }

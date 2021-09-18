@@ -13,9 +13,11 @@
 		35A557AE26F0C17400940625 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A557AD26F0C17400940625 /* Preview Assets.xcassets */; };
 		35A557B926F0DDA200940625 /* CardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A557B826F0DDA200940625 /* CardDetail.swift */; };
 		35A557BB26F0DDE000940625 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A557BA26F0DDE000940625 /* Card.swift */; };
-		35A557BD26F0DF3D00940625 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A557BC26F0DF3D00940625 /* Home.swift */; };
+		35A557BD26F0DF3D00940625 /* CardHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A557BC26F0DF3D00940625 /* CardHome.swift */; };
 		35A557BF26F0E0B000940625 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A557BE26F0E0B000940625 /* CardView.swift */; };
-		35A557C126F0E89300940625 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A557C026F0E89300940625 /* DetailView.swift */; };
+		35A557C126F0E89300940625 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A557C026F0E89300940625 /* CardDetailView.swift */; };
+		35DCF4ED26F5CB0C008C4D91 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DCF4EC26F5CB0C008C4D91 /* TabBar.swift */; };
+		35DCF4EF26F5CE7C008C4D91 /* NavigationBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DCF4EE26F5CE7C008C4D91 /* NavigationBarColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +29,11 @@
 		35A557AF26F0C17400940625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A557B826F0DDA200940625 /* CardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetail.swift; sourceTree = "<group>"; };
 		35A557BA26F0DDE000940625 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		35A557BC26F0DF3D00940625 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		35A557BC26F0DF3D00940625 /* CardHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHome.swift; sourceTree = "<group>"; };
 		35A557BE26F0E0B000940625 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		35A557C026F0E89300940625 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		35A557C026F0E89300940625 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		35DCF4EC26F5CB0C008C4D91 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		35DCF4EE26F5CE7C008C4D91 /* NavigationBarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +66,8 @@
 		35A557A526F0C17300940625 /* SwipeCard(Hero Anima) */ = {
 			isa = PBXGroup;
 			children = (
-				35A557B726F0C1DB00940625 /* Model */,
-				35A557B626F0C1D200940625 /* View Model */,
-				35A557B526F0C1C000940625 /* View */,
+				35DCF4E726F5CAC4008C4D91 /* Global Views */,
+				35DCF4E526F5CAA5008C4D91 /* Screens */,
 				35A557A626F0C17300940625 /* SwipeCards.swift */,
 				35A557A826F0C17300940625 /* ContentView.swift */,
 				35A557AA26F0C17400940625 /* Assets.xcassets */,
@@ -85,9 +88,9 @@
 		35A557B526F0C1C000940625 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				35A557BC26F0DF3D00940625 /* Home.swift */,
+				35A557BC26F0DF3D00940625 /* CardHome.swift */,
 				35A557BE26F0E0B000940625 /* CardView.swift */,
-				35A557C026F0E89300940625 /* DetailView.swift */,
+				35A557C026F0E89300940625 /* CardDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,6 +107,65 @@
 			isa = PBXGroup;
 			children = (
 				35A557BA26F0DDE000940625 /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35DCF4E526F5CAA5008C4D91 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				35DCF4E826F5CADE008C4D91 /* App Store */,
+				35DCF4E626F5CAAD008C4D91 /* SwipCard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		35DCF4E626F5CAAD008C4D91 /* SwipCard */ = {
+			isa = PBXGroup;
+			children = (
+				35A557B726F0C1DB00940625 /* Model */,
+				35A557B626F0C1D200940625 /* View Model */,
+				35A557B526F0C1C000940625 /* View */,
+			);
+			path = SwipCard;
+			sourceTree = "<group>";
+		};
+		35DCF4E726F5CAC4008C4D91 /* Global Views */ = {
+			isa = PBXGroup;
+			children = (
+				35DCF4EC26F5CB0C008C4D91 /* TabBar.swift */,
+				35DCF4EE26F5CE7C008C4D91 /* NavigationBarColor.swift */,
+			);
+			path = "Global Views";
+			sourceTree = "<group>";
+		};
+		35DCF4E826F5CADE008C4D91 /* App Store */ = {
+			isa = PBXGroup;
+			children = (
+				35DCF4EB26F5CAF7008C4D91 /* Model */,
+				35DCF4EA26F5CAF0008C4D91 /* ViewModel */,
+				35DCF4E926F5CAEB008C4D91 /* View */,
+			);
+			path = "App Store";
+			sourceTree = "<group>";
+		};
+		35DCF4E926F5CAEB008C4D91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35DCF4EA26F5CAF0008C4D91 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		35DCF4EB26F5CAF7008C4D91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,8 +241,10 @@
 			files = (
 				35A557A926F0C17300940625 /* ContentView.swift in Sources */,
 				35A557A726F0C17300940625 /* SwipeCards.swift in Sources */,
-				35A557BD26F0DF3D00940625 /* Home.swift in Sources */,
-				35A557C126F0E89300940625 /* DetailView.swift in Sources */,
+				35A557BD26F0DF3D00940625 /* CardHome.swift in Sources */,
+				35DCF4ED26F5CB0C008C4D91 /* TabBar.swift in Sources */,
+				35DCF4EF26F5CE7C008C4D91 /* NavigationBarColor.swift in Sources */,
+				35A557C126F0E89300940625 /* CardDetailView.swift in Sources */,
 				35A557B926F0DDA200940625 /* CardDetail.swift in Sources */,
 				35A557BF26F0E0B000940625 /* CardView.swift in Sources */,
 				35A557BB26F0DDE000940625 /* Card.swift in Sources */,

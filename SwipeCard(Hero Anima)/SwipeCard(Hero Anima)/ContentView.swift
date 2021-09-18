@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var model = CardDetailViewModel()
-    
     var body: some View {
-        Home().environmentObject(model)
+        TabBar()
     }
 }
 
