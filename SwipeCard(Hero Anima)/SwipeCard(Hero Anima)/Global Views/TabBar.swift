@@ -25,7 +25,6 @@ struct TabBar: View {
                     }
                     
                 // Today
-                
                 TodayHomeView(animation: todayAnimation)
                     .environmentObject(todayModel)
                     .tabItem {
@@ -56,6 +55,7 @@ struct TabBar: View {
                         Text("Search")
                     }
             }
+            .opacity(todayModel.show ? 0 : 1)
             
             if cardsModel.showCard {
                 CardDetailView(model: cardsModel, animation: cardAnimation)
